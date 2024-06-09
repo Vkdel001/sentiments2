@@ -20,7 +20,7 @@ def index():
     if request.method == 'POST':
         text = request.form['text']
         # Perform sentiment analysis here and assign the result to sentiment variable
-        sentiment = "Positive"  # Placeholder result
+        sentiment = classifier(text)  # Placeholder result
         app.logger.info(f'Analyzed text: {text}, Sentiment: {sentiment}')
     return render_template('index.html', sentiment=sentiment)
 
